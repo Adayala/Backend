@@ -9,14 +9,14 @@ class Usuario {
   }
 
   getFullName() {
-    const fullName = `El nombre completo es ${this.nombre} ${this.apellido}
+    return `El nombre completo es ${this.nombre} ${this.apellido}
     `;
-
-    return fullName;
   }
 
   getBookNames() {
-    return this.libros;
+    return this.libros.map((libro) => {
+      return libro.nombre;
+    });
   }
 
   addMascota(mascota) {
